@@ -3,35 +3,165 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Freaky John</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body { height: 100%; }
-    body {
-      min-height: 100vh;
-      background: url("FreakyJohn.jpeg") center center / cover no-repeat;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      font-family: "Helvetica Neue", Arial, sans-serif;
-      color: #fff;
-    }
-    h1 {
-      font-size: clamp(3rem, 12vw, 8rem);
-      letter-spacing: 0.05em;
-      text-shadow: 0 4px 24px rgba(0, 0, 0, 0.7);
-    }
-    p {
-      margin-top: 1rem;
-      font-size: clamp(1.25rem, 4vw, 2.5rem);
-      text-shadow: 0 2px 16px rgba(0, 0, 0, 0.7);
-    }
-  </style>
+  <title>John Vasquez — Photographer &amp; Filmmaker</title>
+  <meta name="description" content="John Vasquez is a photographer and filmmaker specializing in wedding &amp; events, documentary, and social media content.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Freaky John</h1>
-  <p>Get freaky with John</p>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <a href="index.html" class="brand">John<span>.</span>Vasquez</a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ============ HERO (showreel video placeholder) ============ -->
+  <!-- TODO: replace background image with John's showreel.
+       Swap the .hero__media div for:
+       <video class="hero__media" autoplay muted loop playsinline poster="assets/hero-poster.jpg">
+         <source src="assets/showreel.mp4" type="video/mp4">
+       </video>  -->
+  <section class="hero">
+    <div class="hero__media" style="background-image:url('https://picsum.photos/seed/jv-hero/1920/1080');"></div>
+    <div class="hero__inner">
+      <p class="eyebrow">Photographer &amp; Filmmaker</p>
+      <h1 class="hero__name">John Vasquez</h1>
+      <p class="hero__tagline">Capturing real moments — weddings, stories, and content that moves.</p>
+      <div class="hero__cta">
+        <span class="play-badge" title="Showreel coming soon"><span class="ring"></span> Watch the Reel</span>
+        <a href="#work" class="btn">View Work</a>
+      </div>
+    </div>
+    <div class="scroll-hint">Scroll</div>
+  </section>
+
+  <!-- ============ CATEGORIES (full-width band, directly after hero) ============ -->
+  <section id="work">
+    <div class="categories">
+      <a class="cat-card" href="wedding-events.html">
+        <div class="cat-card__img" style="background-image:url('https://picsum.photos/seed/jv-wed-card/1000/750');"></div>
+        <div class="cat-card__body">
+          <h3>Wedding &amp; Events</h3>
+          <p>Real moments, beautifully kept.</p>
+          <span class="link-arrow">Explore <span>&rarr;</span></span>
+        </div>
+      </a>
+
+      <a class="cat-card" href="documentary.html">
+        <div class="cat-card__img" style="background-image:url('https://picsum.photos/seed/jv-doc-card/1000/750');"></div>
+        <div class="cat-card__body">
+          <h3>Documentary</h3>
+          <p>Real stories, real people.</p>
+          <span class="link-arrow">Explore <span>&rarr;</span></span>
+        </div>
+      </a>
+
+      <a class="cat-card" href="social-media.html">
+        <div class="cat-card__img" style="background-image:url('https://picsum.photos/seed/jv-soc-card/1000/750');"></div>
+        <div class="cat-card__body">
+          <h3>Social Media Contents</h3>
+          <p>Scroll-stopping short form.</p>
+          <span class="link-arrow">Explore <span>&rarr;</span></span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ SELECTED WORK ============ -->
+  <section class="section section--tight" style="background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div class="container">
+      <div class="section-head section-head--center reveal">
+        <p class="eyebrow">Portfolio</p>
+        <h2>Featured Work</h2>
+      </div>
+      <div class="work-grid reveal">
+        <div class="work-item wide" data-lightbox="https://picsum.photos/seed/jv-f1/1600/900" data-caption="Placeholder — Featured film still">
+          <div class="work-item__img" style="background-image:url('https://picsum.photos/seed/jv-f1/1200/700');"></div>
+          <div class="work-item__cap"><span>Wedding</span><h4>The Hartley Wedding</h4></div>
+        </div>
+        <div class="work-item tall" data-lightbox="https://picsum.photos/seed/jv-f2/900/1200" data-caption="Placeholder — Portrait">
+          <div class="work-item__img" style="background-image:url('https://picsum.photos/seed/jv-f2/700/1000');"></div>
+          <div class="work-item__cap"><span>Documentary</span><h4>Makers of the Coast</h4></div>
+        </div>
+        <div class="work-item" data-lightbox="https://picsum.photos/seed/jv-f3/1200/900" data-caption="Placeholder">
+          <div class="work-item__img" style="background-image:url('https://picsum.photos/seed/jv-f3/800/600');"></div>
+          <div class="work-item__cap"><span>Social</span><h4>Brand Reel — Lumen</h4></div>
+        </div>
+        <div class="work-item" data-lightbox="https://picsum.photos/seed/jv-f4/1200/900" data-caption="Placeholder">
+          <div class="work-item__img" style="background-image:url('https://picsum.photos/seed/jv-f4/800/600');"></div>
+          <div class="work-item__cap"><span>Wedding</span><h4>Sunset Vows</h4></div>
+        </div>
+        <div class="work-item wide" data-lightbox="https://picsum.photos/seed/jv-f5/1600/900" data-caption="Placeholder">
+          <div class="work-item__img" style="background-image:url('https://picsum.photos/seed/jv-f5/1200/700');"></div>
+          <div class="work-item__cap"><span>Documentary</span><h4>One Year on the Trail</h4></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about">
+    <div class="container about reveal">
+      <div class="about__img" style="background-image:url('https://picsum.photos/seed/jv-portrait/900/1100');"></div>
+      <div>
+        <p class="eyebrow">About</p>
+        <h2 style="font-size:clamp(2rem,4.5vw,3rem);margin-top:14px;">John Vasquez</h2>
+        <p>John Vasquez is a photographer and filmmaker who tells honest, cinematic stories. From intimate weddings to long-form documentary work and fast-moving social content, he brings a calm eye and a love of real moments to every project. <em>(Placeholder bio — John to provide final copy.)</em></p>
+        <p>Based wherever the story is. Available for commissions worldwide.</p>
+        <div class="stats">
+          <div class="stat"><strong>120+</strong><span>Weddings</span></div>
+          <div class="stat"><strong>40+</strong><span>Films</span></div>
+          <div class="stat"><strong>8 yrs</strong><span>Behind the lens</span></div>
+        </div>
+        <div style="margin-top:34px;"><a href="#contact" class="btn">Work With Me</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section contact" id="contact">
+    <div class="container reveal">
+      <p class="eyebrow">Get in Touch</p>
+      <h2>Let’s create something.</h2>
+      <p>Tell me about your day, your story, or your brand — I’d love to hear it.</p>
+      <!-- TODO: replace with John's real email -->
+      <a href="mailto:john@example.com" class="btn">john@example.com</a>
+      <div class="socials" style="margin-top:40px;">
+        <!-- TODO: replace '#' with John's real profile URLs -->
+        <a href="#" aria-label="Instagram" title="Instagram (link coming soon)">
+          <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s0-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 1.8c-3.14 0-3.5 0-4.74.07-.9.04-1.38.19-1.7.32-.43.16-.74.36-1.06.68-.32.32-.52.63-.68 1.06-.13.32-.28.8-.32 1.7C3.43 8.5 3.42 8.86 3.42 12s0 3.5.07 4.74c.04.9.19 1.38.32 1.7.16.43.36.74.68 1.06.32.32.63.52 1.06.68.32.13.8.28 1.7.32 1.24.07 1.6.07 4.74.07s3.5 0 4.74-.07c.9-.04 1.38-.19 1.7-.32.43-.16.74-.36 1.06-.68.32-.32.52-.63.68-1.06.13-.32.28-.8.32-1.7.07-1.24.07-1.6.07-4.74s0-3.5-.07-4.74c-.04-.9-.19-1.38-.32-1.7a2.85 2.85 0 0 0-.68-1.06 2.85 2.85 0 0 0-1.06-.68c-.32-.13-.8-.28-1.7-.32C15.5 4 15.14 4 12 4zm0 3.06A4.94 4.94 0 1 1 7.06 12 4.94 4.94 0 0 1 12 7.06zm0 8.15A3.21 3.21 0 1 0 8.79 12 3.21 3.21 0 0 0 12 15.21zm6.29-8.35a1.15 1.15 0 1 1-1.15-1.15 1.15 1.15 0 0 1 1.15 1.15z"/></svg>
+        </a>
+        <a href="#" aria-label="YouTube" title="YouTube (link coming soon)">
+          <svg viewBox="0 0 24 24"><path d="M23.5 6.5a3 3 0 0 0-2.12-2.12C19.5 3.9 12 3.9 12 3.9s-7.5 0-9.38.48A3 3 0 0 0 .5 6.5 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.5 3 3 0 0 0 2.12 2.12C4.5 20.1 12 20.1 12 20.1s7.5 0 9.38-.48a3 3 0 0 0 2.12-2.12A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.5zM9.6 15.6V8.4l6.2 3.6z"/></svg>
+        </a>
+        <a href="#" aria-label="LinkedIn" title="LinkedIn (link coming soon)">
+          <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.74v20.52C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.74V1.74C24 .78 23.2 0 22.22 0z"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <a href="index.html" class="brand">John<span>.</span>Vasquez</a>
+      <nav class="socials">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.21 15.58 2.2 15.2 2.2 12s0-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.21 8.8 2.2 12 2.2zm0 4.86A4.94 4.94 0 1 0 16.94 12 4.94 4.94 0 0 0 12 7.06zm0 8.15A3.21 3.21 0 1 1 15.21 12 3.21 3.21 0 0 1 12 15.21zm6.29-8.35a1.15 1.15 0 1 1-1.15-1.15 1.15 1.15 0 0 1 1.15 1.15z"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.5a3 3 0 0 0-2.12-2.12C19.5 3.9 12 3.9 12 3.9s-7.5 0-9.38.48A3 3 0 0 0 .5 6.5 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.5 3 3 0 0 0 2.12 2.12C4.5 20.1 12 20.1 12 20.1s7.5 0 9.38-.48a3 3 0 0 0 2.12-2.12A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.5zM9.6 15.6V8.4l6.2 3.6z"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.74v20.52C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.74V1.74C24 .78 23.2 0 22.22 0z"/></svg></a>
+      </nav>
+      <p class="copy">© <span data-year>2026</span> John Vasquez. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

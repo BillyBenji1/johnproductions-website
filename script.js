@@ -1,4 +1,4 @@
-/* John Vasquez site — shared interactions */
+/* John Vasquez site - shared interactions */
 (function () {
   "use strict";
 
